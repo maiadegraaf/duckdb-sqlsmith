@@ -17,7 +17,7 @@ jobs:
     uses: duckdb/extension-ci-tools/.github/workflows/_extension_distribution.yml@main
     with:
       extension_name: sqlsmith
-      duckdb_version: main
+      duckdb_version: 30ad316060f38aecd8ceee67f9984c96b3741756
       ci_tools_version: main
       exclude_archs: ''
 
@@ -28,7 +28,7 @@ jobs:
     secrets: inherit
     with:
       extension_name: sqlsmith
-      duckdb_version: main
+      duckdb_version: 30ad316060f38aecd8ceee67f9984c96b3741756
       ci_tools_version: main
       exclude_archs: ''
       deploy_latest: ${{ startsWith(github.ref, 'refs/tags/v') || github.ref == 'refs/heads/main' }}
